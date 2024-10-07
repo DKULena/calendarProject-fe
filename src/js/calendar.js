@@ -17,8 +17,6 @@ async function fetchData() {
     schedules = await res.json();
     updateCalendar();
 
-    // 데이터 출력
-    console.log(schedules, "캘린더js에서 호출");
   } catch (error) {
     // 오류 처리
     console.error("Fetch error:", error);
@@ -335,11 +333,11 @@ function addScheduleToUI(schedule) {
     <a href="#">
       <div class="sidebar-list-box" data-id="${schedule.schedule_id}">
         <div class="sidebar-list-cont">
-          <img src="./public/img/list-circle.svg" alt="" />
+          <img src="/img/list-circle.svg" alt="" />
           <span>${schedule.schedule_title || ""}</span>
         </div>
         <div class="sidebar-list-close">
-          <img src="./public/img/close-btn.svg" alt="" />
+          <img src="/img/close-btn.svg" alt="" />
         </div>
       </div>
     </a>
